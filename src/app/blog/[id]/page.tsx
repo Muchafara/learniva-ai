@@ -4,11 +4,13 @@ import { RelatedPosts } from '@/components/blog/RelatedPosts'
 import { NewsletterSignup } from '@/components/blog/NewsletterSignup'
 import { Footer } from '@/components/layout/Footer'
 
-export default function Page({ params }: { params: { id: string } }) {
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  
   return (
     <div className="overflow-hidden">
       <Navigation />
-      <BlogPost id={params.id} />
+      <BlogPost id={id} />
       <RelatedPosts />
       <NewsletterSignup />
       <Footer />
