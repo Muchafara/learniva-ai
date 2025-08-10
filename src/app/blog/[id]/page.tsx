@@ -4,13 +4,7 @@ import { RelatedPosts } from '@/components/blog/RelatedPosts'
 import { NewsletterSignup } from '@/components/blog/NewsletterSignup'
 import { Footer } from '@/components/layout/Footer'
 
-interface BlogPostPageProps {
-  params: {
-    id: string
-  }
-}
-
-export default function BlogPostPage({ params }: BlogPostPageProps) {
+export default function Page({ params }: { params: { id: string } }) {
   return (
     <div className="overflow-hidden">
       <Navigation />
