@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .nav-shadow {
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+  }
+  
+  .dropdown-shadow {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dark .btn-primary {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px) scale(1.05);
+  }
+  
+  .dark .btn-primary:hover {
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+  
+  .btn-secondary {
+    @apply relative border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white bg-white/80 dark:bg-black/80 backdrop-blur-sm px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-gray-50/90 dark:bg-gray-900/90;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px) scale(1.05);
+  }
+
+  /* Ocular-inspired button styles */
+  .btn-modern {
+    @apply relative overflow-hidden font-medium text-sm px-4 py-2 rounded-md transition-all duration-300;
+  }
+
+  .btn-modern-primary {
+    @apply btn-modern bg-black dark:bg-white text-white dark:text-black;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-modern-primary:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px) scale(1.02);
+  }
+
+  .btn-modern-secondary {
+    @apply btn-modern bg-white dark:bg-black text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700;
+  }
+
+  .btn-modern-secondary:hover {
+    @apply bg-gray-50 dark:bg-gray-900 border-gray-300 dark:border-gray-600;
+    transform: translateY(-1px);
+  }
+
+  .btn-modern-ghost {
+    @apply btn-modern bg-transparent text-gray-600 dark:text-gray-300;
+  }
+
+  .btn-modern-ghost:hover {
+    @apply text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-900;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  .section-padding-sm {
+    @apply py-12 lg:py-16;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .text-brand {
+    @apply text-gray-900 dark:text-white;
+  }
+  
+  .text-brand-accent {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-sm bg-white/10 dark:bg-black/10 border border-white/20 dark:border-black/20 rounded-md;
+  }
+  
+  .simple-card {
+    @apply bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-md;
+  }
+  
+  .simple-glow {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+  }
+  
+  .simple-border {
+    @apply border border-gray-200 dark:border-gray-700;
+  }
+  
+  /* No gradient card styles for black and white */
+  
+  /* No neon glow effects for black and white */
+  
+  /* No background gradient overlays for black and white */
+}
