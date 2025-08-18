@@ -8,12 +8,14 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   const { id } = await params
   
   return (
-    <div className="overflow-hidden">
+    <>
       <Navigation />
-      <BlogPost id={id} />
-      <RelatedPosts />
-      <NewsletterSignup />
+      <div className="overflow-hidden">
+        <BlogPost id={id} />
+        <RelatedPosts />
+        <NewsletterSignup />
+      </div>
       <Footer />
-    </div>
+    </>
   )
 }

@@ -7,12 +7,15 @@ import { Footer } from '@/components/layout/Footer'
 
 export default function BlogPage() {
   return (
-    <div className="overflow-hidden">
+    <>
       <Navigation />
-      <BlogHero />
-      <BlogCategories />
-      <BlogGrid />
-      <NewsletterSignup />
-    </div>
+      <div className="overflow-hidden">
+        <BlogHero />
+        <BlogCategories />
+        <BlogGrid />
+        <NewsletterSignup />
+      </div>
+      <Footer />
+    </>
   )
 }
