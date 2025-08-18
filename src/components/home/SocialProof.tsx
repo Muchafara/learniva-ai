@@ -129,8 +129,8 @@ export function SocialProof() {
                     }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                   >
-                    <div className={`min-h-[240px] min-w-[240px] max-w-xs bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-md p-5 flex flex-col items-center justify-center border border-gray-200 dark:border-gray-800 ${
-                      isActive ? 'shadow-2xl' : 'shadow-lg'
+                    <div className={`min-h-[240px] min-w-[240px] max-w-xs bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-md p-5 flex flex-col items-center justify-center ${
+                      isActive ? 'shadow-2xl' : 'shadow-xl'
                     }`}>
                       {/* Quote Icon */}
                       <div className="flex-shrink-0 flex justify-center items-center mb-2">

@@ -91,7 +91,7 @@ const LearnivaAIDashboard = () => {
   const tabs = ['Summary', 'Flash Cards', 'Exercises'];
 
   return (
-  <div className="hidden md:flex bg-gray-50 dark:bg-black w-[80vw] max-w-5xl mx-auto my-12 rounded-md shadow-lg min-h-[600px] border border-gray-200 dark:border-white/20">
+  <div className="hidden md:flex bg-gray-50 dark:bg-black w-[80vw] max-w-5xl mx-auto my-12 rounded-md shadow-xl min-h-[600px]">
       {/* Sidebar */}
       <motion.div 
         className="bg-white dark:bg-black border-r border-gray-200 dark:border-white/10"
