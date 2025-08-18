@@ -1,1 +1,27 @@
 node_modules
+
+.next/
+
+# VS Code settings and state
+.vscode/
+.history/
+*.code-workspace
+
+# VS Code extensions
+.vscode-test/
+
+# VS Code debug
+*.launch
+*.vsix
+
+# VS Code logs
+*.log
+
+# VS Code server (for remote)
+.vscode-server/
+
+# VS Code local history
+.vscode-local-history/
+
+# VS Code workspace storage
+.vscode-workspaceStorage/

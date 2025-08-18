@@ -97,7 +97,7 @@ export function Navigation() {
       <nav
         className={`fixed top-6 left-1/2 transform -translate-x-1/2 w-[95vw] max-w-6xl bg-white/60 dark:bg-black/60 backdrop-blur-md shadow-lg transition-all duration-300 z-[100] nav-shadow ${
           mobileMenuOpen ? "shadow-2xl" : ""
-  } ${activeDropdown ? "rounded-t-full" : "rounded-full"}`}
+        } ${activeDropdown ? "md:rounded-t-full" : "md:rounded-full"}`}
       >
         <div className="container-custom">
           <div className="flex items-center justify-between h-14">
@@ -159,15 +159,15 @@ export function Navigation() {
                     onMouseLeave={item.hasDropdown ? handleMouseLeave : undefined}
                   >
                     {item.hasDropdown ? (
-                      <button
-                        className="font-medium text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white duration-300 flex items-center gap-1 py-2 transition-all"
+                      <div
+                        className="font-medium text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white duration-300 flex items-center gap-1 py-2 transition-all cursor-pointer"
                         aria-label={`View ${item.title} options`}
                       >
                         {item.title}
                         <HiChevronDown className={`w-4 h-4 transition-all duration-300 ${
                           activeDropdown === item.title ? 'rotate-180 text-black dark:text-white' : ''
                         }`} />
-                      </button>
+                      </div>
                     ) : (
                       <Link 
                         href={item.path} 

@@ -43,8 +43,8 @@ export function TrustedByInstitutions() {
         {/* Scrolling Logos Container */}
         <div className="relative overflow-hidden">
           {/* Gradient masks for smooth edges */}
-          <div className="absolute left-0 top-0 w-16 sm:w-24 h-full bg-gradient-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 w-16 sm:w-24 h-full bg-gradient-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 w-20 sm:w-32 h-full bg-gradient-to-r from-white via-white to-transparent dark:from-black dark:via-black z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 w-20 sm:w-32 h-full bg-gradient-to-l from-white via-white to-transparent dark:from-black dark:via-black z-10 pointer-events-none" />
           
           {/* Scrolling Animation */}
           <motion.div
@@ -66,14 +66,15 @@ export function TrustedByInstitutions() {
               <motion.div
                 key={`${institution.name}-${index}`}
                 className="flex-shrink-0 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, opacity: 1 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <div className="relative w-20 h-10 sm:w-28 sm:h-14 md:w-32 md:h-16 flex items-center justify-center">
+                <div className="relative w-16 h-8 sm:w-28 sm:h-14 md:w-32 md:h-16 flex items-center justify-center mx-2 sm:mx-4">
                   <Image
                     src={institution.logo}
                     alt={`${institution.name} logo`}
                     fill
-                    className="object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                    className="object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                     sizes="(max-width: 640px) 80px, (max-width: 768px) 112px, 128px"
                   />
                 </div>

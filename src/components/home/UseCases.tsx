@@ -33,7 +33,7 @@ const useCases = [
 export function UseCases() {
   return (
     <section className="section-padding-sm bg-white dark:bg-black relative">
-      <div className="w-[95vw] max-w-6xl mx-auto relative z-10">
+      <div className="w-[80vw] max-w-5xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
