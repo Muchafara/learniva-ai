@@ -97,7 +97,7 @@ export function Footer() {
                 <Link href="/" className="flex items-center">
                   {mounted && (
                     <Image
-                      src={theme === 'dark' ? '/Logo/LearnivaAI Logo - White.svg' : '/Logo/LearnivaAI Logo - Black.svg'}
+                      src={theme === 'dark' ? '/Logo/LearnivaAI - Logo Symbol - White.svg' : '/Logo/LearnivaAI - Logo Symbol - black.svg'}
                       alt="Learniva AI"
                       width={140}
                       height={32}
@@ -112,7 +112,7 @@ export function Footer() {
                 </Link>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-2 max-w-md leading-relaxed">
-                Transform your learning experience with our comprehensive learning management system. Create, deliver, and track engaging courses, assessments, and educational content on one unified platform.
+                Transforming Education through personalized intelligence.
               </p>
               
               {/* Contact Info */}

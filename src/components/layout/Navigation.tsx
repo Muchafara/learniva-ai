@@ -104,31 +104,40 @@ export function Navigation() {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                {mounted && (
-                  <Image
-                    src="/Logo/LearnivaAI Logo - Black.svg"
-                    alt="Learniva AI"
-                    width={140}
-                    height={32}
-                    className="h-8 w-auto dark:hidden"
-                    priority
-                  />
-                )}
-                {mounted && (
-                  <Image
-                    src="/Logo/LearnivaAI Logo - White.svg"
-                    alt="Learniva AI"
-                    width={140}
-                    height={32}
-                    className="h-8 w-auto hidden dark:block"
-                    priority
-                  />
-                )}
-                {!mounted && (
-                  <span className="font-bold text-xl font-poppins text-gray-900 dark:text-white">
-                    Learniva
-                  </span>
-                )}
+                {/* Desktop Logo */}
+                <Image
+                  src="/Logo/LearnivaAI Logo - Black.svg"
+                  alt="Learniva AI"
+                  width={140}
+                  height={32}
+                  className="hidden md:block h-8 w-auto dark:hidden"
+                  priority
+                />
+                <Image
+                  src="/Logo/LearnivaAI Logo - White.svg"
+                  alt="Learniva AI"
+                  width={140}
+                  height={32}
+                  className="hidden md:dark:block h-8 w-auto"
+                  priority
+                />
+                {/* Mobile Logo */}
+                <Image
+                  src="/Logo/LearnivaAI - Logo Symbol - black.svg"
+                  alt="Learniva AI"
+                  width={140}
+                  height={32}
+                  className="block md:hidden h-8 w-auto dark:hidden"
+                  priority
+                />
+                <Image
+                  src="/Logo/LearnivaAI - Logo Symbol - White.svg"
+                  alt="Learniva AI"
+                  width={140}
+                  height={32}
+                  className="hidden dark:block md:hidden h-8 w-auto"
+                  priority
+                />
               </Link>
             </div>
 
