@@ -151,15 +151,15 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
       >
-        {/* Orbital Paths */}
-        <svg className="absolute inset-0 w-full h-full opacity-40 dark:opacity-60" viewBox="0 0 100 100" preserveAspectRatio="none">
+        {/* Orbital Paths - now gray for both light and dark mode */}
+        <svg className="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 100 100" preserveAspectRatio="none">
           <motion.ellipse
             cx="50"
             cy="50"
             rx="45"
             ry="25"
             fill="none"
-            className="stroke-[url(#orbital-gradient-light)] dark:stroke-[url(#orbital-gradient-dark)]"
+            stroke="#a3a3a3"
             strokeWidth="0.5"
             strokeDasharray="4,4"
             initial={{ rotate: 0 }}
@@ -173,7 +173,7 @@ export function Hero() {
             rx="35"
             ry="20"
             fill="none"
-            className="stroke-[url(#orbital-gradient-light)] dark:stroke-[url(#orbital-gradient-dark)]"
+            stroke="#a3a3a3"
             strokeWidth="0.5"
             strokeDasharray="4,4"
             initial={{ rotate: 0 }}
@@ -181,25 +181,13 @@ export function Hero() {
             transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
             style={{ transformOrigin: 'center' }}
           />
-          <defs>
-            <linearGradient id="orbital-gradient-light" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="rgba(0,0,0,0.4)" />
-              <stop offset="50%" stopColor="rgba(0,0,0,0.3)" />
-              <stop offset="100%" stopColor="rgba(0,0,0,0.4)" />
-            </linearGradient>
-            <linearGradient id="orbital-gradient-dark" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="rgba(147,112,219,0.5)" />
-              <stop offset="50%" stopColor="rgba(72,209,204,0.5)" />
-              <stop offset="100%" stopColor="rgba(147,112,219,0.5)" />
-            </linearGradient>
-          </defs>
         </svg>
 
-        {/* Floating Planets */}
+        {/* Floating Planets - now gray for all modes */}
         <motion.div
-          className="absolute left-[15%] top-[20%] w-24 h-24 rounded-full bg-gradient-to-br from-gray-400/50 to-gray-600/50 dark:from-[#0193F4]/50 dark:to-[#96F254]/50 backdrop-blur-sm"
+          className="absolute left-[15%] top-[20%] w-24 h-24 rounded-full bg-gradient-to-br from-gray-400/70 to-gray-600/70 backdrop-blur-sm"
           style={{ 
-            boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), 0 0 40px rgba(1, 147, 244, 0.3), inset 2px 2px 20px rgba(150, 242, 84, 0.4)'
+            boxShadow: '0 0 40px rgba(163,163,163,0.3), inset 2px 2px 20px rgba(163,163,163,0.4)'
           }}
           animate={{
             y: [0, -30, 0],
@@ -214,9 +202,9 @@ export function Hero() {
         />
 
         <motion.div
-          className="absolute right-[25%] top-[35%] w-32 h-32 rounded-full bg-gradient-to-br from-gray-300/60 to-gray-500/60 dark:from-[#0193F4]/60 dark:to-[#96F254]/60 backdrop-blur-md"
+          className="absolute right-[25%] top-[35%] w-32 h-32 rounded-full bg-gradient-to-br from-gray-300/80 to-gray-500/80 backdrop-blur-md"
           style={{ 
-            boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), 0 0 50px rgba(1, 147, 244, 0.4), inset 2px 2px 20px rgba(150, 242, 84, 0.4)'
+            boxShadow: '0 0 50px rgba(163,163,163,0.4), inset 2px 2px 20px rgba(163,163,163,0.4)'
           }}
           animate={{
             y: [0, 30, 0],
@@ -229,15 +217,15 @@ export function Hero() {
             ease: "easeInOut"
           }}
         >
-          {/* Planet Ring */}
-          <div className="absolute inset-0 rounded-full border-4 border-gray-400/40 dark:border-teal-500/40 -rotate-45 scale-[1.4] blur-[1px]" />
-          <div className="absolute inset-0 rounded-full border-2 border-gray-300/30 dark:border-teal-400/30 rotate-45 scale-[1.2]" />
+          {/* Planet Ring - gray border */}
+          <div className="absolute inset-0 rounded-full border-4 border-gray-400/40 -rotate-45 scale-[1.4] blur-[1px]" />
+          <div className="absolute inset-0 rounded-full border-2 border-gray-300/30 rotate-45 scale-[1.2]" />
         </motion.div>
 
         <motion.div
-          className="absolute left-[35%] bottom-[25%] w-28 h-28 rounded-full bg-gradient-to-br from-gray-200/50 to-gray-400/50 dark:from-[#96F254]/50 dark:to-[#0193F4]/50 backdrop-blur-md"
+          className="absolute left-[35%] bottom-[25%] w-28 h-28 rounded-full bg-gradient-to-br from-gray-200/70 to-gray-400/70 backdrop-blur-md"
           style={{ 
-            boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), 0 0 45px rgba(150, 242, 84, 0.3), inset 2px 2px 20px rgba(1, 147, 244, 0.4)'
+            boxShadow: '0 0 45px rgba(163,163,163,0.3), inset 2px 2px 20px rgba(163,163,163,0.4)'
           }}
           animate={{
             y: [0, -25, 0],

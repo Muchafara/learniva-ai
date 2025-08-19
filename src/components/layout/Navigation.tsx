@@ -104,40 +104,40 @@ export function Navigation() {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                {/* Desktop Logo */}
-                <Image
-                  src="/Logo/LearnivaAI Logo - Black.svg"
-                  alt="Learniva AI"
-                  width={140}
-                  height={32}
-                  className="hidden md:block h-8 w-auto dark:hidden"
-                  priority
-                />
-                <Image
-                  src="/Logo/LearnivaAI Logo - White.svg"
-                  alt="Learniva AI"
-                  width={140}
-                  height={32}
-                  className="hidden md:dark:block h-8 w-auto"
-                  priority
-                />
-                {/* Mobile Logo */}
-                <Image
-                  src="/Logo/LearnivaAI - Logo Symbol - black.svg"
-                  alt="Learniva AI"
-                  width={140}
-                  height={32}
-                  className="block md:hidden h-8 w-auto dark:hidden"
-                  priority
-                />
-                <Image
-                  src="/Logo/LearnivaAI - Logo Symbol - White.svg"
-                  alt="Learniva AI"
-                  width={140}
-                  height={32}
-                  className="hidden dark:block md:hidden h-8 w-auto"
-                  priority
-                />
+                  {/* Desktop Logo (full logo only) */}
+                  <Image
+                    src="/Logo/LearnivaAI Logo - Black.svg"
+                    alt="Learniva AI"
+                    width={140}
+                    height={32}
+                    className="hidden md:block h-8 w-auto dark:hidden"
+                    priority
+                  />
+                  <Image
+                    src="/Logo/LearnivaAI Logo - White.svg"
+                    alt="Learniva AI"
+                    width={140}
+                    height={32}
+                    className="hidden md:dark:block h-8 w-auto"
+                    priority
+                  />
+                  {/* Mobile Logo (symbol only) */}
+                  <Image
+                    src="/Logo/LearnivaAI - Logo Symbol - black.svg"
+                    alt="Learniva AI"
+                    width={140}
+                    height={32}
+                    className="block md:hidden h-8 w-auto dark:hidden"
+                    priority
+                  />
+                  <Image
+                    src="/Logo/LearnivaAI - Logo Symbol - White.svg"
+                    alt="Learniva AI"
+                    width={140}
+                    height={32}
+                    className="hidden dark:block md:hidden h-8 w-auto"
+                    priority
+                  />
               </Link>
             </div>
 
@@ -168,19 +168,15 @@ export function Navigation() {
                     onMouseLeave={item.hasDropdown ? handleMouseLeave : undefined}
                   >
                     {item.hasDropdown ? (
-                      <>
-                        <button
-                          className="font-medium text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white duration-300 flex items-center gap-1 py-2 transition-all cursor-pointer"
-                          onClick={() => setActiveDropdown(activeDropdown === item.title ? null : item.title)}
-                          aria-expanded={activeDropdown === item.title}
-                          aria-label={`View ${item.title} options`}
-                        >
-                          {item.title}
-                          <HiChevronDown className={`w-4 h-4 transition-all duration-300 ${
-                            activeDropdown === item.title ? 'rotate-180 text-black dark:text-white' : ''
-                          }`} />
-                        </button>
-                      </>
+                      <div
+                        className="font-medium text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white duration-300 flex items-center gap-1 py-2 transition-all cursor-pointer"
+                        aria-label={`View ${item.title} options`}
+                      >
+                        {item.title}
+                        <HiChevronDown className={`w-4 h-4 transition-all duration-300 ${
+                          activeDropdown === item.title ? 'rotate-180 text-black dark:text-white' : ''
+                        }`} />
+                      </div>
                     ) : (
                       <Link 
                         href={item.path} 
