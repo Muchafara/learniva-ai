@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import Image from 'next/image'
 import { HiMenu, HiX, HiSparkles, HiChevronDown } from 'react-icons/hi'
@@ -15,7 +16,7 @@ const navigation = [
     items: [
       { title: 'Learniva Individual', path: '/learniva-individual', description: 'Personal learning companion powered by AI' },
       { title: 'Learniva Enterprise', path: '/learniva-enterprise', description: 'Team collaboration and knowledge management' },
-      { title: 'Features Overview', path: '/features-overview', description: 'Complete feature breakdown and integrations' },
+      { title: 'Features Overview', path: '/features', description: 'Complete feature breakdown and integrations' },
       { title: 'API Documentation', path: '/api-docs', description: 'Integrate Learniva into your workflow' },
     ]
   },
@@ -46,6 +47,7 @@ const navigation = [
 ]
 
 export function Navigation() {
+  const { theme } = useTheme()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [mounted, setMounted] = useState(false)
@@ -126,40 +128,30 @@ export function Navigation() {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                  {/* Desktop Logo (full logo only) */}
-                  <Image
-                    src="/Logo/LearnivaAI Logo - Black.svg"
-                    alt="Learniva AI"
-                    width={140}
-                    height={32}
-                    className="hidden md:block h-8 w-auto dark:hidden"
-                    priority
-                  />
-                  <Image
-                    src="/Logo/LearnivaAI Logo - White.svg"
-                    alt="Learniva AI"
-                    width={140}
-                    height={32}
-                    className="hidden md:dark:block h-8 w-auto"
-                    priority
-                  />
-                  {/* Mobile Logo (symbol only) */}
-                  <Image
-                    src="/Logo/LearnivaAI - Logo Symbol - black.svg"
-                    alt="Learniva AI"
-                    width={32}
-                    height={32}
-                    className="block md:hidden h-8 w-8 dark:hidden"
-                    priority
-                  />
-                  <Image
-                    src="/Logo/LearnivaAI - Logo Symbol - White.svg"
-                    alt="Learniva AI"
-                    width={32}
-                    height={32}
-                    className="hidden dark:block md:hidden h-8 w-8"
-                    priority
-                  />
+                {mounted ? (
+                  <>
+                    {/* Desktop full logo */}
+                    <Image
+                      src={theme === 'dark' ? '/Logo/LearnivaAI Logo - White.svg' : '/Logo/LearnivaAI Logo - Black.svg'}
+                      alt="Learniva AI"
+                      width={140}
+                      height={32}
+                      className="hidden md:block h-8 w-auto"
+                      priority
+                    />
+                    {/* Mobile symbol */}
+                    <Image
+                      src={theme === 'dark' ? '/Logo/LearnivaAI - Logo Symbol - White.svg' : '/Logo/LearnivaAI - Logo Symbol - black.svg'}
+                      alt="Learniva AI"
+                      width={32}
+                      height={32}
+                      className="block md:hidden h-8 w-8"
+                      priority
+                    />
+                  </>
+                ) : (
+                  <span className="text-xl font-bold text-black dark:text-white">Learniva</span>
+                )}
               </Link>
             </div>
 

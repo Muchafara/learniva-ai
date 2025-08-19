@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import Link from 'next/link'
 import { HiCode, HiDesktopComputer, HiUsers, HiChartBar, HiLightningBolt, HiExternalLink, HiX, HiLocationMarker, HiBriefcase, HiAcademicCap } from 'react-icons/hi'
 
 const departments = [
@@ -212,9 +213,9 @@ export function OpenPositions() {
                   We're always looking for exceptional talent. If you're passionate about AI and education, we'd love to hear from you.
                 </p>
               </div>
-              <button className="relative overflow-hidden px-3 py-1.5 text-sm font-medium bg-black dark:bg-white text-white dark:text-black rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg">
+              <Link href="/careers/apply" className="relative overflow-hidden px-3 py-1.5 text-sm font-medium bg-black dark:bg-white text-white dark:text-black rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg text-center">
                 <span className="relative z-10">Send Us Your Resume</span>
-              </button>
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -306,9 +307,13 @@ export function OpenPositions() {
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="flex-1 relative overflow-hidden px-4 py-2 text-sm font-medium bg-black dark:bg-white text-white dark:text-black rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                  <Link
+                    href={`/careers/apply?role=${encodeURIComponent(selectedPosition.title)}&dept=${encodeURIComponent(selectedPosition.department)}&location=${encodeURIComponent(selectedPosition.location)}&type=${encodeURIComponent(selectedPosition.type)}`}
+                    className="flex-1 text-center relative overflow-hidden px-4 py-2 text-sm font-medium bg-black dark:bg-white text-white dark:text-black rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    onClick={closeModal}
+                  >
                     <span className="relative z-10">Apply Now</span>
-                  </button>
+                  </Link>
                   <button 
                     onClick={closeModal}
                     className="flex-1 px-4 py-2 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"

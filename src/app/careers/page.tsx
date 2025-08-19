@@ -1,4 +1,3 @@
-import { CareersHero } from '@/components/careers/CareersHero'
 import { WhyJoinUs } from '@/components/careers/WhyJoinUs'
 import { OpenPositions } from '@/components/careers/OpenPositions'
 import { Navigation } from '@/components/layout/Navigation'
@@ -9,7 +8,6 @@ export default function CareersPage() {
     <>
       <Navigation />
       <div className="overflow-hidden">
-        <CareersHero />
         <WhyJoinUs />
         <OpenPositions />
       </div>

@@ -17,12 +17,12 @@ export function Footer() {
 
   const footerNavigation = {
     features: [
-      { name: 'Note-to-Animation Technology', href: '/#features' },
-      { name: 'Personalized Flashcards', href: '/#features' },
-      { name: 'Learning Analytics', href: '/#features' },
-      { name: 'Multimodal Input Support', href: '/#features' },
-      { name: 'Cross-Platform Access', href: '/#features' },
-      { name: 'AI Grading & Assessment', href: '/#features' },
+      { name: 'Note-to-Animation Technology', href: '/features#note-to-animation-technology' },
+      { name: 'Personalized Flashcards', href: '/features#personalized-flashcards' },
+      { name: 'Learning Analytics', href: '/features#learning-analytics' },
+      { name: 'Multimodal Input Support', href: '/features#multimodal-input-support' },
+      { name: 'Cross-Platform Access', href: '/features#cross-platform-access' },
+      { name: 'AI Grading & Assessment', href: '/features#ai-grading-assessment' },
     ],
     resources: [
       { name: 'Documentation', href: '/docs' },
