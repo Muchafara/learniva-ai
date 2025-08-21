@@ -120,11 +120,14 @@ export function FeaturesSidebar() {
 
           <div className="md:col-span-2">
             {selected && (
-              <article id={selected.id} className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-md p-6 border border-gray-100 dark:border-gray-800">
+              <article
+                id={selected.id}
+                className="simple-card simple-glow rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl"
+              >
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {selected.title}
                 </h2>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   {selected.description}
                 </p>
               </article>

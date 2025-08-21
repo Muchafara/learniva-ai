@@ -69,7 +69,7 @@ export function BlogPost({ id }: BlogPostProps) {
 
   return (
     <article className="pt-24 md:pt-32 pb-20 bg-white dark:bg-black">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-[95vw] max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

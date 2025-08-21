@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { HiCheck } from 'react-icons/hi'
 import { useState, useEffect, useRef } from 'react'
 
 const stats = [
@@ -103,8 +104,8 @@ export function SocialProof() {
         {/* Testimonials Carousel */}
         <div 
           className="relative max-w-6xl mx-auto"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          onMouseEnter={() => { setIsHovered(true); setIsAutoPlaying(false); }}
+          onMouseLeave={() => { setIsHovered(false); setIsAutoPlaying(true); }}
         >
           
           {/* Carousel Container */}
@@ -162,7 +163,7 @@ export function SocialProof() {
             </div>
           </div>
 
-          {/* Navigation Controls - Only visible on hover */}
+          {/* Navigation Controls - Only visible on hover (without play/pause) */}
           <motion.div 
             className="flex items-center justify-center mt-8 space-x-8"
             initial={{ opacity: 0 }}
@@ -180,37 +181,26 @@ export function SocialProof() {
                 </svg>
               </button>
 
-              {/* Play/Pause Button */}
-              <button
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                aria-label={isAutoPlaying ? "Pause auto-play" : "Resume auto-play"}
-                className="w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                {isAutoPlaying ? (
-                  <svg className="w-5 h-5 text-white dark:text-black" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-                  </svg>
-                ) : (
-                  <svg className="w-5 h-5 text-white dark:text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                )}
-              </button>
-
               {/* Dots Indicator */}
-              <div className="flex space-x-3">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToTestimonial(index)}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      currentTestimonial === index
-                        ? 'bg-black dark:bg-white scale-125'
-                        : 'bg-gray-300 dark:bg-gray-700 hover:bg-gray-500 dark:hover:bg-gray-500'
-                    }`}
-                  />
-                ))}
+              <div className="flex space-x-4">
+                {testimonials.map((_, index) => {
+                  const isActive = currentTestimonial === index
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => goToTestimonial(index)}
+                      aria-label={`Go to testimonial ${index + 1}`}
+                      aria-current={isActive ? 'true' : undefined}
+                      className="group w-7 h-7 rounded-full border border-gray-200 dark:border-gray-700 bg-black/10 dark:bg-white/10 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                    >
+                      {isActive ? (
+                        <HiCheck className="w-3.5 h-3.5 text-black dark:text-white" />
+                      ) : (
+                        <span className="w-1.5 h-1.5 rounded-full bg-gray-500 dark:bg-gray-400" />
+                      )}
+                    </button>
+                  )
+                })}
               </div>
 
               {/* Next Button */}

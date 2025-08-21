@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
-import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaLinkedin, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { HiSun, HiMoon, HiDesktopComputer } from 'react-icons/hi'
 
 export function Footer() {
@@ -40,10 +40,7 @@ export function Footer() {
     ],
   }
 
-  const socialMediaLinks = [
-    { name: 'LinkedIn', href: '#', icon: FaLinkedin },
-    // Removed GitHub icon
-  ]
+  // Social links moved to contact-style row for LinkedIn to match email/location styling
 
   function ThemeToggle() {
     return (
@@ -125,21 +122,12 @@ export function Footer() {
                   <FaMapMarkerAlt className="w-4 h-4 mr-3 text-gray-400 dark:text-gray-500" />
                   <span className="text-sm">Educational Technology Hub, San Francisco, CA</span>
                 </div>
+                <div className="flex items-center text-gray-600 dark:text-gray-300">
+                  <FaLinkedin className="w-4 h-4 mr-3 text-gray-400 dark:text-gray-500" />
+                  <Link href="#" className="text-sm hover:text-black dark:hover:text-white transition-colors">LinkedIn</Link>
+                </div>
               </div>
-
-              {/* Social Links */}
-              <div className="flex space-x-2 mb-2">
-                {socialMediaLinks.map((social) => (
-                  <Link
-                    key={social.name}
-                    href={social.href}
-                    className="w-10 h-10 bg-gray-100 dark:bg-gray-900 rounded-md flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
-                    aria-label={social.name}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </Link>
-                ))}
-              </div>
+              
             </div>
 
             {/* Second cell */}

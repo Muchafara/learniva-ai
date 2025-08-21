@@ -118,6 +118,24 @@ export function Navigation() {
 
   return (
     <header className="h-14 relative z-50">
+      {/* Blur overlay when dropdowns or mobile menu are open */}
+      <AnimatePresence>
+        {(activeDropdown || mobileMenuOpen) && (
+          <motion.div
+            key="nav-blur-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            aria-hidden="true"
+            onClick={() => {
+              setActiveDropdown(null)
+              setMobileMenuOpen(false)
+            }}
+            className="fixed inset-0 bg-white/10 dark:bg-black/20 backdrop-blur-sm md:backdrop-blur-md z-[90]"
+          />
+        )}
+      </AnimatePresence>
       <nav
         className={`fixed top-6 left-1/2 transform -translate-x-1/2 w-[95vw] max-w-6xl bg-white/60 dark:bg-black/60 backdrop-blur-md shadow-lg transition-all duration-300 z-[100] nav-shadow ${
           mobileMenuOpen ? "shadow-2xl rounded-t-2xl" : "rounded-full"
@@ -218,12 +236,12 @@ export function Navigation() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: -10, scale: 0.95 }}
                             transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                            className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white dark:bg-black backdrop-blur-md rounded-xl shadow-xl dropdown-shadow overflow-hidden min-w-[280px] max-w-[400px] z-[110]"
+                            className="absolute top-full left-0 mt-2 bg-white dark:bg-black backdrop-blur-md rounded-xl shadow-xl dropdown-shadow overflow-hidden min-w-[520px] max-w-[640px] z-[110]"
                             onMouseEnter={cancelMouseLeave}
                             onMouseLeave={handleMouseLeave}
                           >
                             <div className="py-4 px-2">
-                              <div className="grid grid-cols-1 gap-1">
+                              <div className="grid grid-cols-2 gap-2">
                                 {item.items?.map((subItem, subIdx) => (
                                   <Link
                                     key={subIdx}

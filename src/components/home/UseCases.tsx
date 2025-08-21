@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { HiUserGroup, HiOfficeBuilding } from 'react-icons/hi'
-import { ModernCard } from '../ui/ModernCard'
+import { HiUserGroup, HiOfficeBuilding, HiCheck } from 'react-icons/hi'
 
 const useCases = [
   {
@@ -59,38 +58,39 @@ export function UseCases() {
               viewport={{ once: true }}
               className="flex h-full"
             >
-              <ModernCard
-                icon={useCase.icon}
-                title={useCase.title}
-                description={useCase.description}
-                className="text-center w-full grid grid-rows-[auto_1fr_auto]"
-                darkInLight={true}
-                enableHover={true}
-              >
-                {/* Header content (icon, title, description) */}
-                <div></div>
-                
-                {/* Features list - takes up remaining space */}
+              <div className="simple-card simple-glow rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl text-center w-full grid grid-rows-[auto_1fr_auto]">
+                {/* Header */}
+                <div className="mb-6">
+                  <div className="mb-4">
+                    <div className="p-2 bg-black/10 dark:bg-white/10 rounded-lg w-fit mx-auto">
+                      <useCase.icon className="w-6 h-6 text-black dark:text-white" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{useCase.title}</h3>
+                  <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">{useCase.description}</p>
+                </div>
+
+                {/* Features list */}
                 <div className="flex-1">
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-4 mb-8 text-left">
                     {useCase.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start text-left">
-                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-gray-400 to-gray-500 dark:from-gray-500 dark:to-gray-400 rounded-full mt-2.5 mr-4 flex-shrink-0 shadow-sm"></div>
-                        <span className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-                          {feature}
+                      <li key={featureIndex} className="flex items-start gap-3">
+                        <span className="mt-0.5 p-1 bg-black/10 dark:bg-white/10 rounded">
+                          <HiCheck className="w-4 h-4 text-black dark:text-white" />
                         </span>
+                        <span className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                
-                {/* Button area - always at bottom, aligned horizontally */}
+
+                {/* CTA */}
                 <div className="flex justify-center">
-                  <button className="px-6 py-3 text-sm font-medium bg-gradient-to-r from-gray-900 to-black dark:from-white dark:to-gray-100 text-white dark:text-black rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                  <button className="btn-primary text-sm px-6 py-2.5 !rounded-full">
                     {useCase.title === 'For Institutions' ? 'Schedule Demo' : 'Get Early Access'}
                   </button>
                 </div>
-              </ModernCard>
+              </div>
             </motion.div>
           ))}
         </div>

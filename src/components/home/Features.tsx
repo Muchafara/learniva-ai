@@ -54,7 +54,7 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="min-h-[240px] bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-md p-6"
+              className="min-h-[240px] simple-card simple-glow rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl"
             >
               <div className="flex flex-col h-full space-y-6">
                 <div className="relative">
