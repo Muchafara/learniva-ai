@@ -33,7 +33,7 @@ export function BlogCategories() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               onClick={() => setActiveCategory(category.slug)}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                 activeCategory === category.slug
                   ? 'bg-black dark:bg-white text-white dark:text-black'
                   : 'bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800'

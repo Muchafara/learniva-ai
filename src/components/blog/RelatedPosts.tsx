@@ -115,7 +115,7 @@ export function RelatedPosts() {
         >
           <Link
             href="/blog"
-            className="inline-block px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+            className="inline-block px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
           >
             View All Posts
           </Link>

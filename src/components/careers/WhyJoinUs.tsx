@@ -93,7 +93,7 @@ export function WhyJoinUs() {
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
               Join our team of passionate innovators and help us build the future of personalized learning.
             </p>
-            <button className="relative overflow-hidden px-3 py-1.5 text-sm font-medium bg-black dark:bg-white text-white dark:text-black rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg">
+            <button className="relative overflow-hidden px-4 py-2 text-sm font-medium bg-black dark:bg-white text-white dark:text-black rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg">
               <span className="relative z-10">Explore Opportunities</span>
             </button>
           </div>

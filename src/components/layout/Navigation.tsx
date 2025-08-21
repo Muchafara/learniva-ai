@@ -359,7 +359,7 @@ export function Navigation() {
                   <div className="pt-8 mt-6 border-t border-gray-300/50 dark:border-gray-600/50 space-y-3">
                     <Link
                       href="/signin"
-                      className="block w-full text-center px-4 py-3 text-sm font-medium bg-white/50 dark:bg-black/50 text-gray-700 dark:text-gray-300 rounded-xl hover:bg-white/70 dark:hover:bg-black/70 transition-all duration-200 backdrop-blur-sm border border-gray-200/30 dark:border-gray-700/30"
+                      className="block w-full text-center px-4 py-3 text-sm font-medium bg-white/50 dark:bg-black/50 text-gray-700 dark:text-gray-300 rounded-full hover:bg-white/70 dark:hover:bg-black/70 transition-all duration-200 backdrop-blur-sm border border-gray-200/30 dark:border-gray-700/30"
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveDropdown(null)
@@ -369,7 +369,7 @@ export function Navigation() {
                     </Link>
                     <Link
                       href="/demo"
-                      className="block w-full text-center px-4 py-3 text-sm font-medium bg-black/90 dark:bg-white/90 text-white dark:text-black rounded-xl hover:bg-black dark:hover:bg-white transition-all duration-200 shadow-lg"
+                      className="block w-full text-center px-4 py-3 text-sm font-medium bg-black/90 dark:bg-white/90 text-white dark:text-black rounded-full hover:bg-black dark:hover:bg-white transition-all duration-200 shadow-lg"
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveDropdown(null)

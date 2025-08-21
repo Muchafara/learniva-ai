@@ -242,7 +242,7 @@ export function BlogGrid() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <button className="px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
+          <button className="px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
             Load More Posts
           </button>
         </motion.div>

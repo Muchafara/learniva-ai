@@ -86,9 +86,9 @@ export function BlogHero() {
               <input
                 type="email"
                 placeholder="Subscribe to our newsletter"
-                className="w-80 px-6 py-3 bg-white dark:bg-black border border-gray-300 dark:border-gray-700 rounded-lg text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+                className="w-80 px-6 py-3 bg-white dark:bg-black border border-gray-300 dark:border-gray-700 rounded-full text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
               />
-              <button className="absolute right-2 top-2 px-4 py-1 bg-black dark:bg-white text-white dark:text-black rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
+              <button className="absolute right-2 top-2 px-4 py-1.5 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
                 Subscribe
               </button>
             </div>

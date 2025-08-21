@@ -30,7 +30,7 @@
 
 @layer components {
   .btn-primary {
-    @apply relative overflow-hidden bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105;
+    @apply relative overflow-hidden bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
   
@@ -63,7 +63,7 @@
   }
   
   .btn-secondary {
-    @apply relative border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white bg-white/80 dark:bg-black/80 backdrop-blur-sm px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105;
+    @apply relative border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white bg-white/80 dark:bg-black/80 backdrop-blur-sm px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
   
@@ -75,7 +75,7 @@
 
   /* Ocular-inspired button styles */
   .btn-modern {
-    @apply relative overflow-hidden font-medium text-sm px-4 py-2 rounded-md transition-all duration-300;
+    @apply relative overflow-hidden font-medium text-sm px-4 py-2 rounded-full transition-all duration-300;
   }
 
   .btn-modern-primary {
