@@ -4,13 +4,13 @@ import { SocialProof } from '@/components/home/SocialProof'
 import { Features } from '@/components/home/Features'
 import { UseCases } from '@/components/home/UseCases'
 import LearnivaAIDashboard from '@/components/home/LearnivaAIDashboard'
-import { Navigation } from '@/components/layout/Navigation'
-import { Footer } from '@/components/layout/Footer'
+
+
 
 export default function HomePage() {
   return (
     <>
-      <Navigation />
+
       <div className="overflow-hidden">
         <Hero />
         <TrustedByInstitutions />
@@ -19,7 +19,7 @@ export default function HomePage() {
         <Features />
         <UseCases />
       </div>
-      <Footer />
+
     </>
   )
 }

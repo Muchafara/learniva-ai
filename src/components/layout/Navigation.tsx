@@ -17,7 +17,6 @@ const navigation = [
       { title: 'Learniva Individual', path: '/learniva-individual', description: 'Personal learning companion powered by AI' },
       { title: 'Learniva Enterprise', path: '/learniva-enterprise', description: 'Team collaboration and knowledge management' },
       { title: 'Features Overview', path: '/features', description: 'Complete feature breakdown and integrations' },
-      { title: 'API Documentation', path: '/api-docs', description: 'Integrate Learniva into your workflow' },
     ]
   },
   { title: 'Pricing', path: '/pricing' },
@@ -27,10 +26,7 @@ const navigation = [
     hasDropdown: true,
     items: [
       { title: 'Blog', path: '/blog', description: 'Latest insights and learning strategies' },
-      { title: 'Documentation', path: '/docs', description: 'Complete guides and tutorials' },
       { title: 'Help Center', path: '/help', description: 'Find answers to common questions' },
-      { title: 'Community', path: '/community', description: 'Connect with other learners' },
-      { title: 'Case Studies', path: '/case-studies', description: 'Success stories from our users' },
     ]
   },
   {
@@ -275,7 +271,7 @@ export function Navigation() {
                 Sign In
               </Link>
               <Link href="/demo" className="relative overflow-hidden px-3 py-1.5 text-sm font-medium bg-black dark:bg-white text-white dark:text-black rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                <span className="relative z-10">Get Demo</span>
+                <span className="relative z-10">Book Demo</span>
               </Link>
             </div>
           </div>
@@ -375,7 +371,7 @@ export function Navigation() {
                         setActiveDropdown(null)
                       }}
                     >
-                      Get Demo
+                      Book Demo
                     </Link>
                   </div>
                 </div>

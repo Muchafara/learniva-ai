@@ -1,6 +1,8 @@
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/components/providers/theme-provider'
+import { Navigation } from '@/components/layout/Navigation'
+import { Footer } from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'Learniva AI - Transform Static Notes into Dynamic Learning',
@@ -54,7 +56,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navigation />
           <main className="relative z-10">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

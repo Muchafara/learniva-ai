@@ -1,5 +1,5 @@
-import { Navigation } from '@/components/layout/Navigation'
-import { Footer } from '@/components/layout/Footer'
+
+
 import Link from 'next/link'
 import { HiCheck } from 'react-icons/hi'
 
@@ -28,7 +28,7 @@ const enterpriseFeatures: string[] = [
 export default function PricingPage() {
   return (
     <>
-      <Navigation />
+
       <main className="bg-white dark:bg-black overflow-hidden">
         <section className="pt-28 pb-20">
           <div className="w-[80vw] max-w-5xl mx-auto">
@@ -96,7 +96,7 @@ export default function PricingPage() {
                     Contact Sales
                   </Link>
                   <Link href="/demo" className="btn-modern-secondary text-sm px-6 py-2.5 !rounded-full">
-                    Get Demo
+                    Book Demo
                   </Link>
                 </div>
               </article>
@@ -104,7 +104,7 @@ export default function PricingPage() {
           </div>
         </section>
       </main>
-      <Footer />
+
     </>
   )
 }

@@ -339,7 +339,7 @@ export function Hero() {
             Sign In
           </Link>
           <Link href="/demo" className="relative overflow-hidden px-3 py-1.5 text-sm font-medium bg-black dark:bg-white text-white dark:text-black rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg">
-            <span className="relative z-10">Get Demo</span>
+                            <span className="relative z-10">Book Demo</span>
           </Link>
         </motion.div>
       </div>

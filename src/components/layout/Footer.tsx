@@ -25,12 +25,8 @@ export function Footer() {
       { name: 'AI Grading & Assessment', href: '/features#ai-grading-assessment' },
     ],
     resources: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Getting Started', href: '/getting-started' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Community', href: '/community' },
+      { name: 'Help Center', href: '/help' },
     ],
     company: [
       { name: 'About', href: '/about' },
@@ -112,21 +108,21 @@ export function Footer() {
                 Transforming Education through personalized intelligence.
               </p>
               
-              {/* Contact Info */}
-              <div className="space-y-1 mb-2">
-                <div className="flex items-center text-gray-600 dark:text-gray-300">
-                  <FaEnvelope className="w-4 h-4 mr-3 text-gray-400 dark:text-gray-500" />
-                  <span className="text-sm">support@learniva.ai</span>
-                </div>
-                <div className="flex items-center text-gray-600 dark:text-gray-300">
-                  <FaMapMarkerAlt className="w-4 h-4 mr-3 text-gray-400 dark:text-gray-500" />
-                  <span className="text-sm">Educational Technology Hub, San Francisco, CA</span>
-                </div>
-                <div className="flex items-center text-gray-600 dark:text-gray-300">
-                  <FaLinkedin className="w-4 h-4 mr-3 text-gray-400 dark:text-gray-500" />
-                  <Link href="#" className="text-sm hover:text-black dark:hover:text-white transition-colors">LinkedIn</Link>
-                </div>
-              </div>
+                             {/* Contact Info */}
+               <div className="space-y-1 mb-2">
+                 <div className="flex items-center text-gray-600 dark:text-gray-300">
+                   <FaEnvelope className="w-4 h-4 mr-3 text-gray-400 dark:text-gray-500" />
+                   <span className="text-sm">hello@learniva.ai</span>
+                 </div>
+                 <div className="flex items-center text-gray-600 dark:text-gray-300">
+                   <FaMapMarkerAlt className="w-4 h-4 mr-3 text-gray-400 dark:text-gray-500" />
+                   <span className="text-sm">Lusaka, Zambia</span>
+                 </div>
+                 <div className="flex items-center text-gray-600 dark:text-gray-300">
+                   <FaLinkedin className="w-4 h-4 mr-3 text-gray-400 dark:text-gray-500" />
+                   <Link href="https://linkedin.com/company/learniva-ai" className="text-sm hover:text-black dark:hover:text-white transition-colors">LinkedIn</Link>
+                 </div>
+               </div>
               
             </div>
 
@@ -196,10 +192,10 @@ export function Footer() {
               © {new Date().getFullYear()} Learniva AI, Inc.
             </p>
             <div className="flex flex-wrap gap-6 text-sm">
-              <Link href="/terms" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-200">
+              <Link href="/terms-of-service" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-200">
                 Terms of Service
               </Link>
-              <Link href="/privacy" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-200">
+              <Link href="/privacy-policy" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-200">
                 Privacy Policy
               </Link>
             </div>

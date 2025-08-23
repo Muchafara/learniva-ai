@@ -1,12 +1,12 @@
 import { Suspense } from 'react'
-import { Navigation } from '@/components/layout/Navigation'
-import { Footer } from '@/components/layout/Footer'
+
+
 import { ApplyForm } from './ApplyForm'
 
 export default function ApplyPage() {
   return (
     <>
-      <Navigation />
+
       <main className="bg-white dark:bg-black overflow-hidden">
         <section className="pt-28 pb-16">
           <div className="w-[95vw] max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +25,7 @@ export default function ApplyPage() {
           </div>
         </section>
       </main>
-      <Footer />
+
     </>
   )
 }

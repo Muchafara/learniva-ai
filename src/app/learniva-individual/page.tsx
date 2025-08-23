@@ -1,5 +1,5 @@
-import { Navigation } from '@/components/layout/Navigation'
-import { Footer } from '@/components/layout/Footer'
+
+
 import Link from 'next/link'
 import { HiCheck, HiSparkles, HiLightningBolt, HiBookOpen } from 'react-icons/hi'
 
@@ -25,7 +25,7 @@ const benefits: string[] = [
 export default function LearnivaIndividualPage() {
   return (
     <>
-      <Navigation />
+
       <main className="bg-white dark:bg-black overflow-hidden">
         {/* Hero */}
         <section className="pt-28 pb-16">
@@ -79,7 +79,7 @@ export default function LearnivaIndividualPage() {
           </div>
         </section>
       </main>
-      <Footer />
+
     </>
   )
 }

@@ -5,17 +5,12 @@ import Image from 'next/image'
 
 export function TrustedByInstitutions() {
   const institutions = [
-    { name: 'Airtel', logo: '/Instituions/airtel.svg' },
-    { name: 'IZWE', logo: '/Instituions/izwe.svg' },
-    { name: 'Mastercard', logo: '/Instituions/mastercard.svg' },
-    { name: 'MTN', logo: '/Instituions/mtn.svg' },
-    { name: 'NatSave', logo: '/Instituions/natsave.svg' },
-    { name: 'NHIMA', logo: '/Instituions/nhima.svg' },
-    { name: 'Stanbic', logo: '/Instituions/stanbic.svg' },
-    { name: 'Visa', logo: '/Instituions/visa.svg' },
-    { name: 'Zamtel', logo: '/Instituions/zamtel.svg' },
-    { name: 'ZICA', logo: '/Instituions/zica.svg' },
-    { name: 'ZPPA', logo: '/Instituions/zppa.svg' }
+    { name: 'University of Zambia', logo: '/Instituions/UNZA.svg' },
+    { name: 'Copperbelt University', logo: '/Instituions/CBU.svg' },
+    { name: 'African Leadership University', logo: '/Instituions/ALU.svg' },
+    { name: 'Whitman College', logo: '/Instituions/WHITMAN COLLEGE.svg' },
+    { name: 'Harvard University', logo: '/Instituions/HARVARD.svg' },
+    { name: 'University of Lusaka', logo: '/Instituions/UNILUS.svg' }
   ]
 
   // Duplicate the array for seamless looping
@@ -33,10 +28,10 @@ export function TrustedByInstitutions() {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Loved by Students from renowned Institutions
+            Trusted by Leading Educational Institutions
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Students from leading institutions worldwide love our AI-powered learning platform to transform their educational experiences.
+            Students and educators from prestigious universities and colleges worldwide choose Learniva AI to enhance their learning experiences.
           </p>
         </motion.div>
 

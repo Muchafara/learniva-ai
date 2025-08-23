@@ -1,5 +1,5 @@
-import { Navigation } from '@/components/layout/Navigation'
-import { Footer } from '@/components/layout/Footer'
+
+
 import { FeaturesSidebar } from '@/components/features/FeaturesSidebar'
 
 export const metadata = {
@@ -10,11 +10,11 @@ export const metadata = {
 export default function FeaturesPage() {
   return (
     <>
-      <Navigation />
+
       <main className="bg-white dark:bg-black overflow-hidden">
         <FeaturesSidebar />
       </main>
-      <Footer />
+
     </>
   )
 }

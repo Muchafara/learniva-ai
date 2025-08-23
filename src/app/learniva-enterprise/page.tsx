@@ -1,5 +1,5 @@
-import { Navigation } from '@/components/layout/Navigation'
-import { Footer } from '@/components/layout/Footer'
+
+
 import Link from 'next/link'
 import { HiCheck, HiShieldCheck, HiChartBar, HiCog } from 'react-icons/hi'
 
@@ -26,7 +26,7 @@ const benefits: string[] = [
 export default function LearnivaEnterprisePage() {
   return (
     <>
-      <Navigation />
+
       <main className="bg-white dark:bg-black overflow-hidden">
         {/* Hero */}
         <section className="pt-28 pb-16">
@@ -40,7 +40,7 @@ export default function LearnivaEnterprisePage() {
             </p>
             <div className="mt-6 flex items-center justify-center gap-3">
               <Link href="/contact" className="btn-primary text-sm px-6 py-2.5 !rounded-full">Contact Sales</Link>
-              <Link href="/demo" className="btn-modern-secondary text-sm px-6 py-2.5 !rounded-full">Get Demo</Link>
+              <Link href="/demo" className="btn-modern-secondary text-sm px-6 py-2.5 !rounded-full">Book Demo</Link>
             </div>
           </div>
         </section>
@@ -81,7 +81,7 @@ export default function LearnivaEnterprisePage() {
           </div>
         </section>
       </main>
-      <Footer />
+
     </>
   )
 }
