@@ -91,7 +91,7 @@ export function DemoBookingForm() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-  className="rounded-xl p-6 border shadow-lg max-w-3xl mx-auto bg-white dark:bg-black border-black dark:border-white"
+      className="rounded-xl p-6 shadow-lg max-w-4xl w-full mx-auto bg-white dark:bg-black"
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Personal Information */}
@@ -107,7 +107,7 @@ export function DemoBookingForm() {
               required
               value={formData.firstName}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="Enter your first name"
             />
           </div>
@@ -123,7 +123,7 @@ export function DemoBookingForm() {
               required
               value={formData.lastName}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="Enter your last name"
             />
           </div>
@@ -133,7 +133,7 @@ export function DemoBookingForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-black dark:text-white mb-2">
-              Business Email *
+              Email Address *
             </label>
             <input
               type="email"
@@ -142,7 +142,7 @@ export function DemoBookingForm() {
               required
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="your.email@company.com"
             />
           </div>
@@ -157,7 +157,7 @@ export function DemoBookingForm() {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="+1 (555) 123-4567"
             />
           </div>
@@ -176,7 +176,7 @@ export function DemoBookingForm() {
               required
               value={formData.company}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="Your Company Inc."
             />
           </div>
@@ -192,7 +192,7 @@ export function DemoBookingForm() {
               required
               value={formData.jobTitle}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="e.g., CTO, Learning Manager"
             />
           </div>
@@ -209,14 +209,13 @@ export function DemoBookingForm() {
               required
               value={formData.companySize}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             >
               <option value="">Select company size</option>
               <option value="1-10">1-10 employees</option>
               <option value="11-50">11-50 employees</option>
               <option value="51-200">51-200 employees</option>
-              <option value="201-500">201-500 employees</option>
-              <option value="501-1000">501-1000 employees</option>
+              <option value="201-1000">201-1000 employees</option>
               <option value="1000+">1000+ employees</option>
             </select>
           </div>
@@ -231,7 +230,7 @@ export function DemoBookingForm() {
               required
               value={formData.attendees}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             >
               <option value="1-5">1-5 people</option>
               <option value="6-10">6-10 people</option>
@@ -253,13 +252,13 @@ export function DemoBookingForm() {
               required
               value={formData.meetingPlatform}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             >
               <option value="zoom">Zoom</option>
               <option value="google-meet">Google Meet</option>
               <option value="teams">Microsoft Teams</option>
               <option value="webex">Cisco Webex</option>
-              <option value="other">Other (specify in notes)</option>
+              <option value="other">Other</option>
             </select>
           </div>
           
@@ -275,7 +274,7 @@ export function DemoBookingForm() {
               value={formData.preferredDate}
               onChange={handleInputChange}
               min={new Date().toISOString().split('T')[0]}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             />
           </div>
           
@@ -289,7 +288,7 @@ export function DemoBookingForm() {
               required
               value={formData.preferredTime}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             >
               <option value="">Select time</option>
               <option value="09:00">9:00 AM</option>
@@ -315,18 +314,17 @@ export function DemoBookingForm() {
             required
             value={formData.timezone}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
           >
             <option value="UTC-8">UTC-8 (Pacific Time)</option>
             <option value="UTC-7">UTC-7 (Mountain Time)</option>
             <option value="UTC-6">UTC-6 (Central Time)</option>
             <option value="UTC-5">UTC-5 (Eastern Time)</option>
-            <option value="UTC+0">UTC+0 (GMT)</option>
+            <option value="UTC">UTC (Greenwich Mean Time)</option>
             <option value="UTC+1">UTC+1 (Central European Time)</option>
             <option value="UTC+2">UTC+2 (Eastern European Time)</option>
-            <option value="UTC+3">UTC+3 (Moscow Time)</option>
             <option value="UTC+5:30">UTC+5:30 (India Standard Time)</option>
-            <option value="UTC+8">UTC+8 (China Standard Time)</option>
+            <option value="UTC+8">UTC+8 (Singapore Time)</option>
             <option value="UTC+9">UTC+9 (Japan Standard Time)</option>
             <option value="UTC+10">UTC+10 (Australian Eastern Time)</option>
           </select>
@@ -344,7 +342,7 @@ export function DemoBookingForm() {
             rows={3}
             value={formData.useCase}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             placeholder="Describe how you plan to use Learniva AI (e.g., employee training, knowledge management, customer education)"
           />
         </div>
@@ -360,7 +358,7 @@ export function DemoBookingForm() {
             rows={3}
             value={formData.additionalNotes}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             placeholder="Any specific requirements, questions, or additional information you'd like to share"
           />
         </div>
@@ -370,11 +368,11 @@ export function DemoBookingForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full text-sm px-6 py-2.5 !rounded-full bg-black dark:bg-white text-white dark:text-black border border-black dark:border-white disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full text-sm px-6 py-2.5 rounded-full bg-black dark:bg-white text-white dark:text-black border border-black dark:border-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
           >
             {isSubmitting ? (
               <div className="flex items-center justify-center">
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-black dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white dark:text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>

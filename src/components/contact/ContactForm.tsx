@@ -30,7 +30,7 @@ export function ContactForm() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="rounded-xl p-6 border shadow-lg max-w-3xl mx-auto bg-white dark:bg-black border-black dark:border-white"
+      className="rounded-xl p-6 shadow-lg max-w-4xl w-full mx-auto bg-white dark:bg-black"
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -45,10 +45,11 @@ export function ContactForm() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="Enter your full name"
             />
           </div>
+          
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-black dark:text-white mb-2">
               Email Address *
@@ -60,7 +61,7 @@ export function ContactForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="your.email@company.com"
             />
           </div>
@@ -77,10 +78,11 @@ export function ContactForm() {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="Your company name"
             />
           </div>
+          
           <div>
             <label htmlFor="subject" className="block text-sm font-medium text-black dark:text-white mb-2">
               Subject *
@@ -91,15 +93,14 @@ export function ContactForm() {
               required
               value={formData.subject}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             >
               <option value="">Select a subject</option>
               <option value="general">General Inquiry</option>
               <option value="sales">Sales & Pricing</option>
               <option value="support">Technical Support</option>
-              <option value="partnerships">Partnership Opportunities</option>
-              <option value="demo">Request a Demo</option>
-              <option value="other">Other</option>
+              <option value="partnership">Partnership Opportunity</option>
+              <option value="demo">Request Demo</option>
             </select>
           </div>
         </div>
@@ -115,7 +116,7 @@ export function ContactForm() {
             rows={4}
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
+            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             placeholder="Tell us more about your inquiry..."
           />
         </div>
@@ -123,12 +124,12 @@ export function ContactForm() {
         <div className="pt-4">
           <button
             type="submit"
-            className="w-full text-sm px-6 py-2.5 !rounded-full bg-black dark:bg-white text-white dark:text-black border border-black dark:border-white"
+            className="w-full text-sm px-6 py-2.5 rounded-full bg-black dark:bg-white text-white dark:text-black border border-black dark:border-white hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
           >
             Send Message
           </button>
         </div>
-
+        
         <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
           By submitting this form, you agree to our{' '}
           <a href="/privacy-policy" className="text-blue-600 dark:text-blue-400 hover:underline">
