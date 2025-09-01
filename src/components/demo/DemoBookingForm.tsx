@@ -91,13 +91,13 @@ export function DemoBookingForm() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="simple-card simple-glow rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg"
+  className="rounded-xl p-6 border shadow-lg max-w-3xl mx-auto bg-white dark:bg-black border-black dark:border-white"
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Personal Information */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="firstName" className="block text-sm font-medium text-black dark:text-white mb-2">
               First Name *
             </label>
             <input
@@ -107,13 +107,13 @@ export function DemoBookingForm() {
               required
               value={formData.firstName}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="Enter your first name"
             />
           </div>
           
           <div>
-            <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="lastName" className="block text-sm font-medium text-black dark:text-white mb-2">
               Last Name *
             </label>
             <input
@@ -123,7 +123,7 @@ export function DemoBookingForm() {
               required
               value={formData.lastName}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="Enter your last name"
             />
           </div>
@@ -132,7 +132,7 @@ export function DemoBookingForm() {
         {/* Contact Information */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-black dark:text-white mb-2">
               Business Email *
             </label>
             <input
@@ -142,13 +142,13 @@ export function DemoBookingForm() {
               required
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="your.email@company.com"
             />
           </div>
           
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-black dark:text-white mb-2">
               Phone Number
             </label>
             <input
@@ -157,7 +157,7 @@ export function DemoBookingForm() {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="+1 (555) 123-4567"
             />
           </div>
@@ -166,7 +166,7 @@ export function DemoBookingForm() {
         {/* Company Information */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="company" className="block text-sm font-medium text-black dark:text-white mb-2">
               Company Name *
             </label>
             <input
@@ -176,13 +176,13 @@ export function DemoBookingForm() {
               required
               value={formData.company}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="Your Company Inc."
             />
           </div>
           
           <div>
-            <label htmlFor="jobTitle" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="jobTitle" className="block text-sm font-medium text-black dark:text-white mb-2">
               Job Title *
             </label>
             <input
@@ -192,7 +192,7 @@ export function DemoBookingForm() {
               required
               value={formData.jobTitle}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
               placeholder="e.g., CTO, Learning Manager"
             />
           </div>
@@ -200,7 +200,7 @@ export function DemoBookingForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="companySize" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="companySize" className="block text-sm font-medium text-black dark:text-white mb-2">
               Company Size *
             </label>
             <select
@@ -209,7 +209,7 @@ export function DemoBookingForm() {
               required
               value={formData.companySize}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             >
               <option value="">Select company size</option>
               <option value="1-10">1-10 employees</option>
@@ -222,7 +222,7 @@ export function DemoBookingForm() {
           </div>
           
           <div>
-            <label htmlFor="attendees" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="attendees" className="block text-sm font-medium text-black dark:text-white mb-2">
               Number of Attendees *
             </label>
             <select
@@ -231,7 +231,7 @@ export function DemoBookingForm() {
               required
               value={formData.attendees}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             >
               <option value="1-5">1-5 people</option>
               <option value="6-10">6-10 people</option>
@@ -244,7 +244,7 @@ export function DemoBookingForm() {
         {/* Meeting Preferences */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
-            <label htmlFor="meetingPlatform" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="meetingPlatform" className="block text-sm font-medium text-black dark:text-white mb-2">
               Preferred Platform *
             </label>
             <select
@@ -253,7 +253,7 @@ export function DemoBookingForm() {
               required
               value={formData.meetingPlatform}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             >
               <option value="zoom">Zoom</option>
               <option value="google-meet">Google Meet</option>
@@ -264,7 +264,7 @@ export function DemoBookingForm() {
           </div>
           
           <div>
-            <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="preferredDate" className="block text-sm font-medium text-black dark:text-white mb-2">
               Preferred Date *
             </label>
             <input
@@ -275,12 +275,12 @@ export function DemoBookingForm() {
               value={formData.preferredDate}
               onChange={handleInputChange}
               min={new Date().toISOString().split('T')[0]}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             />
           </div>
           
           <div>
-            <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="preferredTime" className="block text-sm font-medium text-black dark:text-white mb-2">
               Preferred Time *
             </label>
             <select
@@ -289,7 +289,7 @@ export function DemoBookingForm() {
               required
               value={formData.preferredTime}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+              className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             >
               <option value="">Select time</option>
               <option value="09:00">9:00 AM</option>
@@ -306,7 +306,7 @@ export function DemoBookingForm() {
         </div>
 
         <div>
-          <label htmlFor="timezone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="timezone" className="block text-sm font-medium text-black dark:text-white mb-2">
             Timezone *
           </label>
           <select
@@ -315,7 +315,7 @@ export function DemoBookingForm() {
             required
             value={formData.timezone}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+            className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
           >
             <option value="UTC-8">UTC-8 (Pacific Time)</option>
             <option value="UTC-7">UTC-7 (Mountain Time)</option>
@@ -334,7 +334,7 @@ export function DemoBookingForm() {
 
         {/* Use Case */}
         <div>
-          <label htmlFor="useCase" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="useCase" className="block text-sm font-medium text-black dark:text-white mb-2">
             Primary Use Case *
           </label>
           <textarea
@@ -344,14 +344,14 @@ export function DemoBookingForm() {
             rows={3}
             value={formData.useCase}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+            className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             placeholder="Describe how you plan to use Learniva AI (e.g., employee training, knowledge management, customer education)"
           />
         </div>
 
         {/* Additional Notes */}
         <div>
-          <label htmlFor="additionalNotes" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="additionalNotes" className="block text-sm font-medium text-black dark:text-white mb-2">
             Additional Notes
           </label>
           <textarea
@@ -360,7 +360,7 @@ export function DemoBookingForm() {
             rows={3}
             value={formData.additionalNotes}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+            className="w-full px-4 py-3 border border-black dark:border-white rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent bg-white dark:bg-black text-black dark:text-white transition-colors"
             placeholder="Any specific requirements, questions, or additional information you'd like to share"
           />
         </div>
@@ -370,11 +370,11 @@ export function DemoBookingForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full btn-primary text-sm px-6 py-2.5 !rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full text-sm px-6 py-2.5 !rounded-full bg-black dark:bg-white text-white dark:text-black border border-black dark:border-white disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? (
               <div className="flex items-center justify-center">
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-black dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
