@@ -66,7 +66,6 @@ export function ContactForm() {
       onSubmit={handleSubmit} 
       className="max-w-2xl w-full mx-auto bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-md p-6 border border-gray-100 dark:border-gray-800"
     >
-      <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Contact Us</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>

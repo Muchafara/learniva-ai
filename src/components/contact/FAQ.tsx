@@ -1,16 +1,20 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { HiChevronDown } from 'react-icons/hi'
 
 export function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
+
   const faqs = [
     {
       question: "What is Learniva AI?",
-      answer: "Learniva AI is a comprehensive learning management system that transforms traditional education through AI-powered features like note-to-animation technology, personalized flashcards, and intelligent assessment tools."
+      answer: "Learniva AI is a comprehensive learning platform that transforms traditional education through intelligent features like note-to-animation technology, personalized flashcards, and adaptive assessment tools."
     },
     {
       question: "How does the note-to-animation technology work?",
-      answer: "Our AI analyzes your notes and automatically converts key concepts into interactive animations and visual content, making complex topics easier to understand and remember."
+      answer: "Our system analyzes your notes and automatically converts key concepts into interactive animations and visual content, making complex topics easier to understand and remember."
     },
     {
       question: "Is Learniva AI suitable for all education levels?",
@@ -30,70 +34,98 @@ export function FAQ() {
     },
     {
       question: "What kind of support do you offer?",
-      answer: "We provide comprehensive support including 24/7 technical assistance, onboarding guidance, training resources, and dedicated account management for institutional clients."
+      answer: "We provide comprehensive support including technical assistance, onboarding guidance, training resources, and dedicated account management for institutional clients."
     },
     {
       question: "How can I request a demo?",
-      answer: "You can request a personalized demo by filling out our contact form, calling us directly, or visiting our website's demo page. Our team will schedule a convenient time to showcase the platform."
+      answer: "You can request a personalized demo by visiting our demo page, filling out our contact form, or reaching out to our team directly. We'll schedule a convenient time to showcase the platform."
     }
   ]
 
-  return (
-    <section className="py-20 bg-white dark:bg-black">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            Find answers to common questions about Learniva AI
-          </p>
-        </motion.div>
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index)
+  }
 
-        <div className="space-y-6">
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white dark:bg-black rounded-lg p-6 border border-gray-200 dark:border-gray-800"
+  return (
+    <div className="w-full">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center mb-12"
+      >
+        <h2 className="text-3xl lg:text-4xl font-bold font-poppins text-gray-900 dark:text-white mb-4">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Find answers to common questions about our platform and features
+        </p>
+      </motion.div>
+
+      <div className="max-w-3xl mx-auto space-y-4">
+        {faqs.map((faq, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.05 }}
+            viewport={{ once: true }}
+            className="simple-card simple-glow rounded-xl p-6 border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg"
+          >
+            <button
+              onClick={() => toggleFAQ(index)}
+              className="w-full flex items-center justify-between text-left focus:outline-none"
             >
-              <h3 className="text-lg font-semibold text-black dark:text-white mb-3">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white pr-4">
                 {faq.question}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {faq.answer}
-              </p>
+              <HiChevronDown 
+                className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform duration-300 flex-shrink-0 ${
+                  openIndex === index ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+            
+            <motion.div
+              initial={false}
+              animate={{
+                height: openIndex === index ? 'auto' : 0,
+                opacity: openIndex === index ? 1 : 0
+              }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              className="overflow-hidden"
+            >
+              <div className="pt-4 border-t border-gray-100 dark:border-gray-800 mt-4">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
             </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12 p-8 bg-white dark:bg-black rounded-lg"
-        >
-          <h3 className="text-xl font-semibold text-black dark:text-white mb-3">
-            Still have questions?
-          </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Can't find the answer you're looking for? Our support team is here to help.
-          </p>
-          <a
-            href="mailto:support@learniva.ai"
-            className="inline-block px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-200"
-          >
-            Contact Support
-          </a>
-        </motion.div>
+          </motion.div>
+        ))}
       </div>
-    </section>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        viewport={{ once: true }}
+        className="text-center mt-12 p-8 simple-card simple-glow rounded-xl border border-gray-200 dark:border-gray-700 max-w-2xl mx-auto"
+      >
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+          Still have questions?
+        </h3>
+        <p className="text-gray-600 dark:text-gray-300 mb-6">
+          Can't find the answer you're looking for? Our support team is here to help.
+        </p>
+        <a
+          href="mailto:support@learniva.ai"
+          className="btn-primary text-sm px-6 py-2.5 !rounded-full inline-block"
+        >
+          Contact Support
+        </a>
+      </motion.div>
+    </div>
   )
 }
