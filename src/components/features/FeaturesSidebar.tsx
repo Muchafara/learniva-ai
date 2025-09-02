@@ -95,9 +95,9 @@ export function FeaturesSidebar() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           <aside className="md:sticky md:top-24">
-            <nav aria-label="Features" className="space-y-2">
+            <nav aria-label="Features" className="space-y-2 h-full">
               {FEATURE_ITEMS.map((item) => {
                 const isActive = item.id === selectedFeatureId
                 return (
@@ -118,18 +118,20 @@ export function FeaturesSidebar() {
             </nav>
           </aside>
 
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 flex">
             {selected && (
               <article
                 id={selected.id}
-                className="simple-card simple-glow rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl"
+                className="simple-card simple-glow rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl flex-1 flex flex-col justify-center min-h-full"
               >
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  {selected.title}
-                </h2>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  {selected.description}
-                </p>
+                <div className="flex flex-col justify-center h-full">
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                    {selected.title}
+                  </h2>
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                    {selected.description}
+                  </p>
+                </div>
               </article>
             )}
           </div>
@@ -138,5 +140,3 @@ export function FeaturesSidebar() {
     </section>
   )
 }
-
-
