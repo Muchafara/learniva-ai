@@ -127,7 +127,7 @@ export function DemoBookingForm() {
               required
               value={formData.firstName}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
               placeholder="Enter your first name"
             />
           </div>
@@ -139,7 +139,7 @@ export function DemoBookingForm() {
               required
               value={formData.lastName}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
               placeholder="Enter your last name"
             />
           </div>
@@ -151,7 +151,7 @@ export function DemoBookingForm() {
               required
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
               placeholder="your.email@company.com"
             />
           </div>
@@ -162,7 +162,7 @@ export function DemoBookingForm() {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
               placeholder="+1 (555) 123-4567"
             />
           </div>
@@ -174,7 +174,7 @@ export function DemoBookingForm() {
               required
               value={formData.company}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
               placeholder="Your Company Inc."
             />
           </div>
@@ -186,7 +186,7 @@ export function DemoBookingForm() {
               required
               value={formData.jobTitle}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
               placeholder="e.g., CTO, Learning Manager"
             />
           </div>
@@ -197,7 +197,7 @@ export function DemoBookingForm() {
               required
               value={formData.companySize}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             >
               <option value="">Select company size</option>
               <option value="1-10">1-10 employees</option>
@@ -214,7 +214,7 @@ export function DemoBookingForm() {
               required
               value={formData.attendees}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             >
               <option value="1-5">1-5 people</option>
               <option value="6-10">6-10 people</option>
@@ -229,7 +229,7 @@ export function DemoBookingForm() {
               required
               value={formData.meetingPlatform}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             >
               <option value="zoom">Zoom</option>
               <option value="google-meet">Google Meet</option>
@@ -247,7 +247,7 @@ export function DemoBookingForm() {
               value={formData.preferredDate}
               onChange={handleInputChange}
               min={new Date().toISOString().split('T')[0]}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             />
           </div>
           <div>
@@ -257,7 +257,7 @@ export function DemoBookingForm() {
               required
               value={formData.preferredTime}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             >
               <option value="">Select time</option>
               <option value="09:00">9:00 AM</option>
@@ -278,7 +278,7 @@ export function DemoBookingForm() {
               required
               value={formData.timezone}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             >
               <option value="UTC-8">UTC-8 (Pacific Time)</option>
               <option value="UTC-7">UTC-7 (Mountain Time)</option>
@@ -301,7 +301,7 @@ export function DemoBookingForm() {
               rows={3}
               value={formData.useCase}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
               placeholder="Describe how you plan to use Learniva AI (e.g., employee training, knowledge management, customer education)"
             />
           </div>
@@ -312,7 +312,7 @@ export function DemoBookingForm() {
               rows={3}
               value={formData.additionalNotes}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
               placeholder="Any specific requirements, questions, or additional information you'd like to share"
             />
           </div>

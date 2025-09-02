@@ -1,5 +1,6 @@
 
 import { Metadata } from 'next'
+import { ContactHero } from '@/components/contact/ContactHero'
 import { ContactForm } from '@/components/contact/ContactForm'
 import { FAQ } from '@/components/contact/FAQ'
 
@@ -11,17 +12,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-black overflow-hidden">
-      <div className="w-[80vw] max-w-5xl mx-auto pt-28 pb-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-3xl lg:text-4xl font-bold font-poppins text-gray-900 dark:text-white mb-3">
-            Contact Us
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Have questions or need support? We're here to help. Reach out to our team and we'll get back to you as soon as possible.
-          </p>
-        </div>
-
+      <ContactHero />
+      <div className="w-[80vw] max-w-5xl mx-auto py-16">
         {/* Contact Form */}
         <ContactForm />
         

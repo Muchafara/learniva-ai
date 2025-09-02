@@ -4,13 +4,6 @@ import { motion } from 'framer-motion'
 import { HiCheck } from 'react-icons/hi'
 import { useState, useEffect, useRef } from 'react'
 
-const stats = [
-  { number: '50K+', label: 'Students Worldwide' },
-  { number: '100+', label: 'Educational Institutions' },
-  { number: '1M+', label: 'Notes Transformed' },
-  { number: '98%', label: 'Learning Improvement' },
-]
-
 const testimonials = [
   {
     quote: "LearnivaAI completely transformed how I study. My static notes now come alive with interactive animations that make complex medical concepts actually stick. It's like having a personal tutor who understands exactly how I learn.",

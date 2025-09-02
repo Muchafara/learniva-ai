@@ -77,7 +77,7 @@ export function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Enter your full name"
-            className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+            className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
           />
         </div>
         <div>
@@ -89,7 +89,7 @@ export function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder="your.email@company.com"
-            className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+            className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
           />
         </div>
         <div>
@@ -100,7 +100,7 @@ export function ContactForm() {
             value={formData.company}
             onChange={handleChange}
             placeholder="Your company name"
-            className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+            className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
           />
         </div>
         <div>
@@ -110,7 +110,7 @@ export function ContactForm() {
             required
             value={formData.subject}
             onChange={handleChange}
-            className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+            className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
           >
             <option value="">Select a subject</option>
             <option value="general">General Inquiry</option>
@@ -129,7 +129,7 @@ export function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             placeholder="Tell us more about your inquiry..."
-            className="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+            className="w-full px-3 py-2 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
           />
         </div>
       </div>

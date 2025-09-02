@@ -60,7 +60,7 @@ export function ApplyForm() {
               required
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             />
           </div>
           <div>
@@ -70,7 +70,7 @@ export function ApplyForm() {
               required
               value={emailAddress}
               onChange={(e) => setEmailAddress(e.target.value)}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             />
           </div>
           <div>
@@ -80,7 +80,7 @@ export function ApplyForm() {
               placeholder="https://linkedin.com/in/username"
               value={linkedinUrl}
               onChange={(e) => setLinkedinUrl(e.target.value)}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             />
           </div>
           <div>
@@ -90,7 +90,7 @@ export function ApplyForm() {
               placeholder="https://..."
               value={portfolioUrl}
               onChange={(e) => setPortfolioUrl(e.target.value)}
-              className="w-full px-3 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             />
           </div>
           <div className="md:col-span-2">
@@ -99,7 +99,7 @@ export function ApplyForm() {
               rows={6}
               value={coverLetter}
               onChange={(e) => setCoverLetter(e.target.value)}
-              className="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white"
             />
           </div>
         </div>

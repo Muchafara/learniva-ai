@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
+import { HiDocumentText } from 'react-icons/hi'
 
 export function BlogHero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -15,6 +16,7 @@ export function BlogHero() {
       y: e.clientY - rect.top
     })
   }
+
   return (
     <>
       <style jsx>{`
@@ -33,7 +35,7 @@ export function BlogHero() {
         }
       `}</style>
       <section 
-        className="relative pt-24 md:pt-0 bg-white dark:bg-black min-h-screen flex items-center overflow-hidden cursor-none"
+        className="relative min-h-screen w-full overflow-hidden cursor-none bg-[#ffffff] dark:bg-[#000000]"
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
@@ -54,48 +56,44 @@ export function BlogHero() {
           <div className="absolute pointer-events-none z-20 w-4 h-4 bg-black dark:bg-white rounded-full transition-transform duration-100 scale-125 custom-cursor" />
         )}
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-        <div className="text-center">
+        {/* Hero Content */}
+        <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-4 md:pt-2">
+          {/* Icon */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8"
+          >
+            <div className="p-2 bg-black/10 dark:bg-white/10 rounded-lg w-fit">
+              <HiDocumentText className="w-8 h-8 text-black dark:text-white" />
+            </div>
+          </motion.div>
+
+          {/* Main Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-5xl font-bold text-black dark:text-white mb-6"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl lg:text-5xl font-bold font-poppins text-center text-gray-900 dark:text-white mb-8"
           >
-            The Learniva AI{' '}
-            <span className="text-black dark:text-white">
-              Blog
+            Blog &{' '}
+            <span className="block text-gray-900 dark:text-white">
+              Insights
             </span>
           </motion.h1>
+
+          {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8"
+            className="text-lg text-center text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Insights, updates, and thought leadership on AI-powered education, learning technologies, 
-            and the future of digital learning experiences.
+            Discover the latest insights in AI-powered education, learning science, and how technology is transforming the way we learn.
           </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <div className="relative">
-              <input
-                type="email"
-                placeholder="Subscribe to our newsletter"
-                className="w-80 px-6 py-3 bg-white dark:bg-black border border-gray-300 dark:border-gray-700 rounded-full text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
-              />
-              <button className="absolute right-2 top-2 px-4 py-1.5 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </motion.div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   )
 }

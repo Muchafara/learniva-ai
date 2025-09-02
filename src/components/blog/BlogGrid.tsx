@@ -112,7 +112,7 @@ export function BlogGrid() {
 
   return (
     <section className="py-20 bg-white dark:bg-black">
-      <div className="w-[95vw] max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-[80vw] max-w-5xl mx-auto">
         {/* Featured Posts */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -133,7 +133,7 @@ export function BlogGrid() {
                 className="group cursor-pointer"
               >
                 <Link href={`/blog/${post.id}`}>
-                  <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-300 hover:shadow-lg">
+                  <div className="simple-card simple-glow rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
                     <div className="relative h-64 overflow-hidden">
                       <Image
                         src={post.image}
@@ -194,7 +194,7 @@ export function BlogGrid() {
                 className="group cursor-pointer"
               >
                 <Link href={`/blog/${post.id}`}>
-                  <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-300 hover:shadow-lg h-full">
+                  <div className="simple-card simple-glow rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 h-full">
                     <div className="relative h-48 overflow-hidden">
                       <Image
                         src={post.image}
@@ -242,7 +242,7 @@ export function BlogGrid() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <button className="px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
+          <button className="px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-full hover:scale-105 transition-all duration-300 hover:shadow-lg">
             Load More Posts
           </button>
         </motion.div>
